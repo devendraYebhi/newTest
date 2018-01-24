@@ -1,0 +1,13 @@
+.main_wrapper {
+  float: left;
+  width: 100%;
+  .header_Wrapper,
+  .routerOutlet_wrapper {
+    float: left;
+    width: 100%;
+    position: relative;
+  }
+  .routerOutlet_wrapper>* {
+    display: block;
+  }
+}

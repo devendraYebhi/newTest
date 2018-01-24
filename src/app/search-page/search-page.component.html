@@ -1,0 +1,35 @@
+<div class="serachpage_wrapper" @fadeInAnimation>
+  <!--@fadeInAnimation -->
+  <header>
+    <h1>Welcome to Shipment Search Page</h1>
+  </header>
+  <section class="content">
+    <section class="left-section">
+      <div class="searchBoxHolder">
+        <p class="search-lable">Search shipment by id</p>
+        <div id='search-box'>
+          <form id='search-form' (ngSubmit)="goToTable($event,'btn')">
+            <input id='search-text' name='search' value="" placeholder='Search...' type='text' #search autocomplete="on" autofocus="true"
+            />
+            <button id='search-button' type="button" (click)="goToTable($event,'btn')">
+              <span>Search</span>
+            </button>
+
+          </form>
+          <p *ngIf='emptyErrorMsg && !search.value' class="error">Please insert a shipment Id</p>
+        </div>
+      </div>
+
+
+    </section>
+    <section class="right-section">
+      <div class="btnHolder">
+        <button mat-raised-button color="warn" (click)='goToTableForAllRecords()'>Show All Shipments</button>
+      </div>
+
+
+    </section>
+  </section>
+
+
+</div>

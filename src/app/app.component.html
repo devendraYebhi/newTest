@@ -1,0 +1,10 @@
+<div class="main_wrapper">
+  <div class="header_Wrapper">
+    <app-header></app-header>
+  </div>
+
+  <div class="routerOutlet_wrapper" [@routeAnimation]="getDepth(myOutlet)">
+    <!-- -->
+    <router-outlet #myOutlet="outlet"></router-outlet>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<div class=" ">
+
+  <!-- {{data | json}} -->
+  <h2 mat-dialog-title>{{data.title}}</h2>
+  <mat-dialog-content>
+    <ngx-datatable class="" [rows]="data.data" [columnMode]="'force'" [headerHeight]="50" [rowHeight]="'auto'" style="min-height:100px">
+      <ngx-datatable-column name="Station ID" prop="stationId"></ngx-datatable-column>
+      <ngx-datatable-column name="City" prop="city"></ngx-datatable-column>
+      <ngx-datatable-column name="State" prop="stateProvince"> </ngx-datatable-column>
+      <ngx-datatable-column name="Postal Code" prop="postalCode"></ngx-datatable-column>
+    </ngx-datatable>
+  </mat-dialog-content>
+</div>
+
+
+
+<!-- <mat-table #table [dataSource]="data">
+    <ng-container matColumnDef="position">
+      <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+    </ng-container>
+
+
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef> City Name </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+    </ng-container>
+
+
+    <ng-container matColumnDef="weight">
+      <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
+    </ng-container>
+
+
+    <ng-container matColumnDef="symbol">
+      <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table> -->

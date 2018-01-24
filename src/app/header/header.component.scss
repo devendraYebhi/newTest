@@ -1,0 +1,48 @@
+.rainbowLine {
+  height: 3px;
+  background: rgb(185, 176, 176);
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, rgb(255, 115, 0), rgb(255, 136, 0), green, cyan, blue, violet);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, orange, yellow, green, cyan, blue, violet);
+  /* Standard syntax (must be last) */
+}
+
+.header {
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  position: relative;
+  box-shadow: 0px 1px 5px #b7b5b566, 1px 0 1px grey;
+  .header-inner {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    overflow: hidden;
+    display: table;
+    .left-section {
+      float: left;
+    }
+    .right-section {
+      float: right;
+      width: 25%;
+    }
+    .logo {
+      position: relative;
+      float: left;
+      background: url("../../assets/images/bnsf.png") no-repeat;
+      height: 50px;
+      width: 145px;
+      background-size: 100%;
+      overflow: hidden;
+      background-position: 0px -11px;
+    }
+    .cartHolder {
+      position: relative;
+    }
+  }
+}

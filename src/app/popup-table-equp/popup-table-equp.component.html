@@ -1,0 +1,13 @@
+<div class=" ">
+
+  <!-- {{data | json}} -->
+  <h2 mat-dialog-title>{{data.title}}</h2>
+  <mat-dialog-content>
+    <ngx-datatable class="" [rows]="data.data" [columnMode]="'force'" [headerHeight]="50" [rowHeight]="'auto'" style="min-height:100px">
+      <ngx-datatable-column name="Station ID" prop="stationId"></ngx-datatable-column>
+      <ngx-datatable-column name="City" prop="city"></ngx-datatable-column>
+      <ngx-datatable-column name="State" prop="stateProvince"> </ngx-datatable-column>
+      <ngx-datatable-column name="Postal Code" prop="postalCode"></ngx-datatable-column>
+    </ngx-datatable>
+  </mat-dialog-content>
+</div>

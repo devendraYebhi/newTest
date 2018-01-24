@@ -1,0 +1,58 @@
+<!-- <p>
+  <select name="i_qtty" [(ngModel)]=currentValue (change)="updateValue()">
+    <option value="0">Value 0</option>
+    <option value="1">Value 1</option>
+    <option value="2">Value 2</option>
+    <option value="3">Value 3</option>
+  </select>
+</p> -->
+<!-- {{detailData | json}} -->
+<!-- <div *ngIf="detailData.length>0"> -->
+
+<!-- <app-loading-spinner ></app-loading-spinner> -->
+<!-- <mat-spinner></mat-spinner> -->
+
+<ngx-datatable class=" material mat-elevation-z1" [rows]="detailData" [columnMode]="'force'" [headerHeight]="50" [footerHeight]="50"
+  [loadingIndicator]="!load" [rowHeight]="'auto'" [limit]="6" style="min-height:100px">
+
+  <!-- <ngx-datatable-column name="Shipment Id" prop="shipmentId" [canAutoResize]="false"></ngx-datatable-column> -->
+  <ngx-datatable-column name="Shipment Id" prop="shipmentId" [canAutoResize]="false"></ngx-datatable-column>
+  <ngx-datatable-column name="Shipment Sender" prop="applSend"> </ngx-datatable-column>
+  <ngx-datatable-column name="Shipment Agency" prop="applReceiver"></ngx-datatable-column>
+  <ngx-datatable-column name="Transmission Date" prop="interchangeDate"></ngx-datatable-column>
+  <ngx-datatable-column name="Origin" prop="originStation">
+    <ng-template let-row="row" ngx-datatable-cell-template>
+      <a href="javascript:void(0)" style="color:#f15d22;" (click)="openDialog(row.originStation,'origin','city')"> {{row.originStation.city}}</a>
+    </ng-template>
+  </ngx-datatable-column>
+  <ngx-datatable-column name="Destination" prop="destinationStation">
+    <ng-template let-row="row" ngx-datatable-cell-template>
+      <a href="javascript:void(0)" style="color:#f15d22;" (click)="openDialog(row.destinationStation,'dest','city')"> {{row.destinationStation.city}}</a>
+    </ng-template>
+  </ngx-datatable-column>
+  <ngx-datatable-column name="Equipment dis" prop="equipment">
+    <ng-template let-row="row" ngx-datatable-cell-template let-rowIndex="rowIndex">
+      <a href="javascript:void(0)" style="color:#f15d22;" (click)="openDialog(row.destinationStation,'dest','equp')"> {{row.equipment[0].name}} {{rowIndex}}</a>
+    </ng-template>
+  </ngx-datatable-column>
+  <!-- <ngx-datatable-column name="Adderss" prop="ShipmentSenderAddress" [canAutoResize]="true">
+    <ng-template let-row="row" ngx-datatable-cell-template>
+      <span class="tooltip">abc</span>--Name: - {{row.ShipmentSenderAddress.Name}},
+      <br /> Station type : - {{row.ShipmentSenderAddress.Station_type}}, State Province :- {{row.ShipmentSenderAddress.State_Province}},
+      City: - {{row.ShipmentSenderAddress.City}}, Postal Code:- {{row.ShipmentSenderAddress.Postal_Code}}
+    </ng-template>
+  </ngx-datatable-column>
+  <ngx-datatable-column name="Shipment VendorId" [cellClass]="getCellClass" prop="ShipmentVendorId">
+    <!-- <ng-template let-row="row" ngx-datatable-cell-template>
+        <img src="{{row.avatar}}" />
+      </ng-template> 
+  </ngx-datatable-column>-->
+</ngx-datatable>
+<!-- </div> -->
+<!-- <div *ngIf="detailData.length===0 && load">
+  No Record found
+  <button>Go to Search page</button>
+</div> -->
+
+
+<!-- <button (click)="openDialog({id:1,city:'abc'}, 'abc','equp')">Click</button> -->
